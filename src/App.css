@@ -28,10 +28,49 @@ header .logo {
   opacity: .7;
   
 }
+main {
+  background-color: #2A2B2A;
+  border: 1px solid white;
+  z-index: 1;
+}
+
+body .recipe-card {
+  /* border: 2px solid black; */
+  background-color: white;
+  margin: 0 1em 1em 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body .recipe-card img {
+  padding-top: 1em;
+  max-width: 80%;
+}
+
+body .recipe-card .stars-container {
+margin: 1em 0 0 0;
+}
+body .recipe-card p {
+  padding: .5em 1em;
+}
+
+body .recipe-card .stars {
+  font-size: 3em;
+  margin: 0 auto;
+  max-width: fit-content;
+  color: orange;
+  border: 1px solid black;
+  border-radius: 2em;
+  display: flex;
+  align-content: center;
+  padding: 0 .25em;
+}
+
 
 footer {
   /* border: 2px solid red; */
-  min-height: 40vh;
+  min-height: 30vh;
   background-color: #FFF2E2;
   display: flex;
   flex-direction: column;
