@@ -1,11 +1,23 @@
 import React from 'react';
 import './App.css';
-import Recipes from './Recipes';
+import { Routes } from './routes'
+import Nav from './shared/Nav'
+import Footer from './shared/Footer'
 
 function App() {
   return (
     <div className="App">
-      <Recipes/>
+      <header>
+        <Nav/>
+      </header>
+
+      <main>
+      <Routes/>
+      </main>
+
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   );
 }
