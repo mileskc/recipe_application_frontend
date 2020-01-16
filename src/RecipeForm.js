@@ -4,7 +4,7 @@ import { Button } from "./shared/Button";
 
 const RecipeForm = (props) => {
     const { onChange, onSubmit, onDirectionsStepChange, onAddDirection, onRemoveDirection } = props
-    const { name, author, img, description, prep_time, serving_size, calories_count, star_rating, step, directions, element, ingredients  } = props.formData
+    const { name, author, img, description, prep_time, serving_size, calories_count, star_rating, directions, ingredients  } = props.formData
 
     return (
         <form className='form' onSubmit={(e) => onSubmit(e)}>
@@ -64,7 +64,7 @@ const RecipeForm = (props) => {
                 placeholder='Rating (1-5)'
                 onChange={(e) => onChange(e)}
             />
-            {/* <Input
+            <Input
                 name='directions'
                 value={directions}
                 required={true}
@@ -77,7 +77,7 @@ const RecipeForm = (props) => {
                 required={true}
                 placeholder='Recipe Ingredients'
                 onChange={(e) => onChange(e)}
-            /> */}
+            />
 
             {/* {directions.map((direction, idx) => (
                 <div>

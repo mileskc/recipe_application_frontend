@@ -14,6 +14,8 @@ class EditRecipe extends React.Component {
       serving_size: 0,
       calories_count: 0,
       star_rating: 0,
+      ingredients: "",
+      directions: "",
       errorMsg: ""
     };
   }
@@ -32,7 +34,9 @@ class EditRecipe extends React.Component {
       prep_time,
       serving_size,
       calories_count,
-      star_rating
+      star_rating,
+      ingredients,
+      directions
     } = this.state;
     const data = {
       name,
@@ -42,7 +46,9 @@ class EditRecipe extends React.Component {
       prep_time,
       serving_size,
       calories_count,
-      star_rating
+      star_rating,
+      ingredients,
+      directions
     };
     api
       .put(`/recipes/${this.props.match.params.recipe_id}`, data)
@@ -68,7 +74,9 @@ class EditRecipe extends React.Component {
         prep_time: recipes.data.prep_time,
         serving_size: recipes.data.serving_size,
         calories_count: recipes.data.calories_count,
-        star_rating: recipes.data.star_rating
+        star_rating: recipes.data.star_rating,
+        ingredients: recipes.data.ingredients,
+        directions: recipes.data.directions
       });
     } catch (error) {
       console.error(error);
@@ -88,7 +96,9 @@ class EditRecipe extends React.Component {
       prep_time,
       serving_size,
       calories_count,
-      star_rating
+      star_rating,
+      ingredients,
+      directions
     } = this.state;
     return (
       <div>
@@ -102,7 +112,9 @@ class EditRecipe extends React.Component {
             prep_time,
             serving_size,
             calories_count,
-            star_rating
+            star_rating,
+            ingredients,
+            directions
           }}
           onChange={this.handleChange}
           onSubmit={this.handleSubmit}

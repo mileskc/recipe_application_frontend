@@ -14,10 +14,8 @@ class CreateRecipe extends React.Component {
       serving_size: 0,
       calories_count: 0,
       star_rating: 0,
-      step: "",
-      directions: [{ step: "" }],
-      element: "",
-      ingredients: [{ element: "" }],
+      directions: "",
+      ingredients: "",
       errorMsg: ""
     };
   }
@@ -33,9 +31,7 @@ class CreateRecipe extends React.Component {
       serving_size,
       calories_count,
       star_rating,
-      step,
       directions,
-      element,
       ingredients
     } = this.state;
 
@@ -48,9 +44,7 @@ class CreateRecipe extends React.Component {
       serving_size,
       calories_count,
       star_rating,
-      step,
       directions,
-      element,
       ingredients
     };
 
@@ -104,9 +98,7 @@ class CreateRecipe extends React.Component {
       serving_size,
       calories_count,
       star_rating,
-      step,
       directions,
-      element,
       ingredients
     } = this.state;
     return (
@@ -122,9 +114,7 @@ class CreateRecipe extends React.Component {
             serving_size,
             calories_count,
             star_rating,
-            step,
             directions,
-            element,
             ingredients
           }}
           onChange={this.handleChange}
