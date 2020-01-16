@@ -14,12 +14,21 @@ class Recipes extends React.Component {
     this.getRecipes();
   }
 
+  // getRecipes() {
+  //   fetch("http://localhost:3000/recipes")
+  //     .then(response => response.json())
+  //     .then(jsonedRecipes => this.setState({ recipes: jsonedRecipes }))
+  //     .catch(error => console.error(error));
+  // }
+
   getRecipes() {
-    fetch("http://localhost:3000/recipes")
+    fetch("https://recipe-gdv-app.herokuapp.com/recipes")
       .then(response => response.json())
       .then(jsonedRecipes => this.setState({ recipes: jsonedRecipes }))
       .catch(error => console.error(error));
   }
+
+  
 
   showStars(num) {
       let image = '★';
