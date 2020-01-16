@@ -4,6 +4,7 @@ import Landing from '../screens/Landing'
 import Recipes from '../screens/Recipes'
 import CreateRecipe from '../screens/CreateRecipe'
 import EditRecipe from '../screens/EditRecipe'
+import Recipe from '../screens/Recipe'
 
 export const Routes = (props) => {
     return (
@@ -21,7 +22,7 @@ export const Routes = (props) => {
             <Route exact path='/recipes/edit/:recipe_id' component={EditRecipe} />
 
             {/* show single recipe page */}
-            {/* <Route exact path='/recipes/:recipe_id' component={} /> */}
+            <Route exact path='/recipes/:recipe_id' component={Recipe} />
 
         </Switch>
     )
